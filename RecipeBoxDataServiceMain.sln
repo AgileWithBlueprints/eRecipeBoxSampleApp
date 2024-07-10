@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeBoxDataServiceMain", "eRecipeBoxSystem\RecipeBoxDataServiceMain\RecipeBoxDataServiceMain.csproj", "{36CE18F0-A3A7-4D3C-877F-C9E870443D17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeBoxDataService", "eRecipeBoxSystem\RecipeBoxDataService\RecipeBoxDataService.csproj", "{065AAF0A-19CA-4500-91A3-59D15BEA364F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foundation", "eRecipeBoxSystem\Foundation\Foundation.csproj", "{BFEEA477-0713-4EDD-9811-C3D0A4A18FCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStoreUtils", "eRecipeBoxSystem\DataStoreUtils\DataStoreUtils.csproj", "{03135D99-C0CB-4087-9B7B-FB476E39EB23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeBoxSolutionModel", "eRecipeBoxSystem\RecipeBoxSolutionModel\RecipeBoxSolutionModel.csproj", "{795705C9-ED2D-433D-945B-14C8CF5323FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36CE18F0-A3A7-4D3C-877F-C9E870443D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36CE18F0-A3A7-4D3C-877F-C9E870443D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36CE18F0-A3A7-4D3C-877F-C9E870443D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36CE18F0-A3A7-4D3C-877F-C9E870443D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{065AAF0A-19CA-4500-91A3-59D15BEA364F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{065AAF0A-19CA-4500-91A3-59D15BEA364F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{065AAF0A-19CA-4500-91A3-59D15BEA364F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{065AAF0A-19CA-4500-91A3-59D15BEA364F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFEEA477-0713-4EDD-9811-C3D0A4A18FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFEEA477-0713-4EDD-9811-C3D0A4A18FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFEEA477-0713-4EDD-9811-C3D0A4A18FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFEEA477-0713-4EDD-9811-C3D0A4A18FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03135D99-C0CB-4087-9B7B-FB476E39EB23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03135D99-C0CB-4087-9B7B-FB476E39EB23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03135D99-C0CB-4087-9B7B-FB476E39EB23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03135D99-C0CB-4087-9B7B-FB476E39EB23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{795705C9-ED2D-433D-945B-14C8CF5323FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{795705C9-ED2D-433D-945B-14C8CF5323FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{795705C9-ED2D-433D-945B-14C8CF5323FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{795705C9-ED2D-433D-945B-14C8CF5323FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28D0C300-61D1-442A-881F-93B760EB422E}
+	EndGlobalSection
+EndGlobal

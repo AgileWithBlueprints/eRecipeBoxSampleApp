@@ -1,0 +1,96 @@
+table_name	colSeq	column_name	cType	max_length	is_nullable	RefTableName	RefTableColumn
+CookedDish	1	OID	int	4	False		
+CookedDish	2	RecipeCard	int	4	True	RecipeCard	OID
+CookedDish	3	CookedDate	datetime	8	False		
+CookedDish	4	OptimisticLockField	int	4	True		
+CookedDish	5	GCRecord	int	4	True		
+GroceryList	1	OID	int	4	False		
+GroceryList	2	RecipeBox	int	4	True	RecipeBox	OID
+GroceryList	3	OptimisticLockField	int	4	True		
+GroceryList	4	GCRecord	int	4	True		
+GroceryListItem	1	OID	int	4	False		
+GroceryListItem	2	GroceryList	int	4	True	GroceryList	OID
+GroceryListItem	3	Qty	nvarchar	510	True		
+GroceryListItem	4	UoM	nvarchar	510	True		
+GroceryListItem	5	ItemDescription	nvarchar	8000	True		
+GroceryListItem	6	Item	nvarchar	8000	False		
+GroceryListItem	7	OptimisticLockField	int	4	True		
+GroceryListItem	8	GCRecord	int	4	True		
+Ingredient	1	OID	int	4	False		
+Ingredient	2	RecipeCard	int	4	True	RecipeCard	OID
+Ingredient	3	SortOrder	int	4	False		
+Ingredient	4	Qty	nvarchar	510	True		
+Ingredient	5	UoM	nvarchar	510	True		
+Ingredient	6	ItemDescription	nvarchar	8000	False		
+Ingredient	7	Item	int	4	True	Item	OID
+Ingredient	8	OptimisticLockField	int	4	True		
+Ingredient	9	GCRecord	int	4	True		
+Item	1	OID	int	4	False		
+Item	2	Name	nvarchar	8000	False		
+Item	3	OptimisticLockField	int	4	True		
+Item	4	GCRecord	int	4	True		
+Keyword	1	OID	int	4	False		
+Keyword	2	Name	nvarchar	8000	False		
+Keyword	3	OptimisticLockField	int	4	True		
+Keyword	4	GCRecord	int	4	True		
+ModelVersion	1	OID	int	4	False		
+ModelVersion	2	DataStoreComponent	nvarchar	512	False		
+ModelVersion	3	Version	datetime	8	False		
+ModelVersion	4	IsMajorVersion	bit	1	False		
+ModelVersion	5	Comment	nvarchar	8000	True		
+ModelVersion	6	OptimisticLockField	int	4	True		
+ModelVersion	7	GCRecord	int	4	True		
+RecipeBox	1	OID	int	4	False		
+RecipeBox	2	Name	nvarchar	8000	True		
+RecipeBox	3	OptimisticLockField	int	4	True		
+RecipeBox	4	GCRecord	int	4	True		
+RecipeCard	1	OID	int	4	False		
+RecipeCard	2	RecipeBox	int	4	True	RecipeBox	OID
+RecipeCard	3	CreatedDate	datetime	8	False		
+RecipeCard	4	Title	nvarchar	2000	False		
+RecipeCard	5	Description	nvarchar	8000	True		
+RecipeCard	6	SourceURL	nvarchar	2000	True		
+RecipeCard	7	SourceIndividualFirstName	nvarchar	500	True		
+RecipeCard	8	SourceIndividualLastName	nvarchar	500	True		
+RecipeCard	9	PrepTime	int	4	True		
+RecipeCard	10	CookTime	int	4	True		
+RecipeCard	11	TotalTime	int	4	True		
+RecipeCard	12	Yield	nvarchar	400	True		
+RecipeCard	13	Rating	money	8	True		
+RecipeCard	14	RatingCount	int	4	True		
+RecipeCard	15	MyRating	int	4	True		
+RecipeCard	16	Instructions	nvarchar	8000	True		
+RecipeCard	17	Notes	nvarchar	8000	True		
+RecipeCard	18	WouldLikeToTryFlag	bit	1	False		
+RecipeCard	19	OptimisticLockField	int	4	True		
+RecipeCard	20	GCRecord	int	4	True		
+RecipeCardKeywords	1	Keywords	int	4	True	Keyword	OID
+RecipeCardKeywords	2	Recipes	int	4	True	RecipeCard	OID
+RecipeCardKeywords	3	OID	int	4	False		
+RecipeCardKeywords	4	OptimisticLockField	int	4	True		
+UserProfile	1	OID	int	4	False		
+UserProfile	2	FirstName	nvarchar	1000	False		
+UserProfile	3	LastName	nvarchar	1000	False		
+UserProfile	4	PersonalEmail	nvarchar	1000	False		
+UserProfile	5	PersonalCellNumber	nvarchar	100	False		
+UserProfile	6	HomeZipCode	nvarchar	20	False		
+UserProfile	7	OptimisticLockField	int	4	True		
+UserProfile	8	GCRecord	int	4	True		
+UserProfileClientComputer	1	OID	int	4	False		
+UserProfileClientComputer	2	UserProfile	int	4	True	UserProfile	OID
+UserProfileClientComputer	3	ClientDeviceMAC	nvarchar	200	True		
+UserProfileClientComputer	4	ClientSystemName	nvarchar	512	False		
+UserProfileClientComputer	5	WindowsUserName	nvarchar	512	True		
+UserProfileClientComputer	6	InstalledDate	datetime	8	True		
+UserProfileClientComputer	7	NumberOfLogins	int	4	True		
+UserProfileClientComputer	8	LastLoginDate	datetime	8	True		
+UserProfileClientComputer	9	OptimisticLockField	int	4	True		
+UserProfileClientComputer	10	GCRecord	int	4	True		
+UserProfileRecipeBox	1	OID	int	4	False		
+UserProfileRecipeBox	2	RecipeBox	int	4	True	RecipeBox	OID
+UserProfileRecipeBox	3	UserProfile	int	4	True	UserProfile	OID
+UserProfileRecipeBox	4	OptimisticLockField	int	4	True		
+UserProfileRecipeBox	5	GCRecord	int	4	True		
+XPObjectType	1	OID	int	4	False		
+XPObjectType	2	TypeName	nvarchar	508	True		
+XPObjectType	3	AssemblyName	nvarchar	508	True		

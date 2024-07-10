@@ -1,0 +1,6 @@
+*****
+DISCLAIMER: 
+This sample business app, including its accompanying test dataset, is provided for educational and learning purposes only. Users are encouraged to explore the features of the app and experiment with the test data as part of their leaning process
+However, redistribution or sharing of the test dataset outside the context of this sample app is strictly prohibited. The test dataset included with this app is intended solely for the purpose of testing and learning within the scope of this sample application.
+By using this sample app and its test dataset, you agree to abide by these terms and conditions. Any unauthorized distribution or sharing of the test dataset may result in legal action.
+*****

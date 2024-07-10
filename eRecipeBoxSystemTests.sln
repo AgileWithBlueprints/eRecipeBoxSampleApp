@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eRecipeBoxSystemTests", "eRecipeBoxSystemTest\eRecipeBoxSystemTests\eRecipeBoxSystemTests.csproj", "{6789D8E6-50EC-4063-8EC5-BF43D710A416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DxWinAppDriverUtils", "eRecipeBoxSystemTest\DxWinAppDriverUtils\DxWinAppDriverUtils.csproj", "{BA246F36-A0C8-4A8D-A549-0A3AB9740B5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6789D8E6-50EC-4063-8EC5-BF43D710A416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6789D8E6-50EC-4063-8EC5-BF43D710A416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6789D8E6-50EC-4063-8EC5-BF43D710A416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6789D8E6-50EC-4063-8EC5-BF43D710A416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA246F36-A0C8-4A8D-A549-0A3AB9740B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA246F36-A0C8-4A8D-A549-0A3AB9740B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA246F36-A0C8-4A8D-A549-0A3AB9740B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA246F36-A0C8-4A8D-A549-0A3AB9740B5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32298537-F40B-4F8E-B4B6-AD7BD568FA39}
+	EndGlobalSection
+EndGlobal

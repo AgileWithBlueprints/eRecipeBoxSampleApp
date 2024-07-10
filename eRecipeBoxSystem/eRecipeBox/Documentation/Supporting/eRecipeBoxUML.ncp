@@ -1,0 +1,1377 @@
+<Project>
+  <Name>eRecipeBox</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.2, Culture=neutral, PublicKeyToken=null">
+    <Name>BusDomainModel</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Recipe</Name>
+        <Access>Public</Access>
+        <Location left="449" top="258" />
+        <Size width="163" height="94" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Ingredient</Name>
+        <Access>Public</Access>
+        <Location left="427" top="377" />
+        <Size width="185" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int Quantity</Member>
+        <Member type="Field">string UnitOfMeasure</Member>
+        <Member type="Field">string IngredientDescription</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Item</Name>
+        <Access>Public</Access>
+        <Location left="688" top="377" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GroceryList</Name>
+        <Access>Public</Access>
+        <Location left="688" top="258" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CookedDish</Name>
+        <Access>Public</Access>
+        <Location left="449" top="102" />
+        <Size width="163" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Date CookedDate</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Meal</Name>
+        <Access>Public</Access>
+        <Location left="201" top="102" />
+        <Size width="162" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Date EatenDate</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Association" first="0" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="2">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>663</X>
+          <Y>399</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>0..1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="3" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+        <EndMultiplicity>1..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="0" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.2, Culture=neutral, PublicKeyToken=null">
+    <Name>ToBeSolutionModel</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Meal</Name>
+        <Access>Public</Access>
+        <Location left="222" top="122" />
+        <Size width="162" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Date EatenDate</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CookedDish</Name>
+        <Access>Public</Access>
+        <Location left="459" top="122" />
+        <Size width="163" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Date CookedDate</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GroceryList</Name>
+        <Access>Public</Access>
+        <Location left="921" top="365" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Item</Name>
+        <Access>Public</Access>
+        <Location left="692" top="466" />
+        <Size width="162" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string Name</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Ingredient</Name>
+        <Access>Public</Access>
+        <Location left="430" top="466" />
+        <Size width="192" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int Quantity</Member>
+        <Member type="Field">string UnitOfMeasure</Member>
+        <Member type="Field">String IngredientDescription</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RecipeCard</Name>
+        <Access>Public</Access>
+        <Location left="459" top="278" />
+        <Size width="163" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">String Title</Member>
+        <Member type="Field">String Instructions</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RecipeBox</Name>
+        <Access>Public</Access>
+        <Location left="222" top="278" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UserProfile</Name>
+        <Access>Public</Access>
+        <Location left="222" top="411" />
+        <Size width="163" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">String FirstName</Member>
+        <Member type="Field">String LastName</Member>
+        <Member type="Field">String eMail</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Keyword</Name>
+        <Access>Public</Access>
+        <Location left="709" top="241" />
+        <Size width="162" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">String Name</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UserProfileClientComputer</Name>
+        <Access>Public</Access>
+        <Location left="238" top="600" />
+        <Size width="227" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string ClientDeviceMAC</Member>
+        <Member type="Field">string ClientSystemName</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GroceryListItem</Name>
+        <Access>Public</Access>
+        <Location left="921" top="466" />
+        <Size width="201" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string IngredientDescription</Member>
+        <Member type="Field">string ItemName</Member>
+        <Member type="Field">string Quantity</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Association" first="5" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="4" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>667</X>
+          <Y>488</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="6" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="5" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>506</X>
+          <Y>421</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="8">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="7" second="9">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="10">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="10">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>896</X>
+          <Y>513</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>896</X>
+          <Y>513</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="6" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>350</X>
+          <Y>364</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>895</X>
+          <Y>405</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="0" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.2, Culture=neutral, PublicKeyToken=null">
+    <Name>SimpleCRUDFramework</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>MDIParentForm</Name>
+        <Access>Public</Access>
+        <Location left="221" top="264" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MDIChildForm</Name>
+        <Access>Public</Access>
+        <Location left="527" top="109" />
+        <Size width="214" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string NextFormToOpen</Member>
+        <Member type="Method">public void ConfigureCommandButtons()</Member>
+        <Member type="Method">public void DoConfigureCommandButtons()</Member>
+        <Member type="Method">public virtual BaseEdit ValidateControls()</Member>
+        <Member type="Method">public virtual bool ValidateForm()</Member>
+        <Member type="Method">public bool ValidateAndNotify()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>FormStack</Name>
+        <Access>Public</Access>
+        <Location left="204" top="109" />
+        <Size width="272" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void PushStackAndShowDialogForm(form Form)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CRUDBusinessObjectForm</Name>
+        <Access>Public</Access>
+        <Location left="817" top="79" />
+        <Size width="224" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">XPObject FormHeadBusinssObject</Member>
+        <Member type="Field">UnitOfWork UnitOfWork</Member>
+        <Member type="Method">public bool DoSave()</Member>
+        <Member type="Method">public bool DoSaveAndClose()</Member>
+        <Member type="Method">public void DoCancel()</Member>
+        <Member type="Method">public virtual bool ReloadModel()</Member>
+        <Member type="Method">public virtual void ModelToView()</Member>
+        <Member type="Method">public virtual bool ViewToModel()</Member>
+        <Member type="Method">public virtual bool ReloadModelAndView()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RecipeBoxMDIParent</Name>
+        <Access>Public</Access>
+        <Location left="221" top="378" />
+        <Size width="178" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>LoginForm</Name>
+        <Access>Public</Access>
+        <Location left="424" top="359" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SearchRecipeBox</Name>
+        <Access>Public</Access>
+        <Location left="460" top="458" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>EditRecipeCard</Name>
+        <Access>Public</Access>
+        <Location left="653" top="338" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>EditGroceryList</Name>
+        <Access>Public</Access>
+        <Location left="976" top="398" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ImportRecipeCard</Name>
+        <Access>Public</Access>
+        <Location left="926" top="506" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ViewRecipeCard</Name>
+        <Access>Public</Access>
+        <Location left="701" top="398" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SelectIngredientsForGroceryList</Name>
+        <Access>Public</Access>
+        <Location left="763" top="573" />
+        <Size width="265" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AskGPT</Name>
+        <Access>Public</Access>
+        <Location left="740" top="476" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Association" first="0" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>502</X>
+          <Y>224</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>567</X>
+          <Y>316</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>606</X>
+          <Y>433</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="10" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>861</X>
+          <Y>373</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>861</X>
+          <Y>350</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="9" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>966</X>
+          <Y>343</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="8" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1030</X>
+          <Y>335</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="3" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="4" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>298</X>
+          <Y>353</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>298</X>
+          <Y>368</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="0" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>296</X>
+          <Y>237</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Generalization" first="7" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>761</X>
+          <Y>313</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>792</X>
+          <Y>273</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="11" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>916</X>
+          <Y>338</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="12" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>882</X>
+          <Y>451</Y>
+        </BendPoint>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.2, Culture=neutral, PublicKeyToken=null">
+    <Name>ModelView</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Item</Name>
+        <Access>Public</Access>
+        <Location left="729" top="486" />
+        <Size width="162" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string Name</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Ingredient</Name>
+        <Access>Public</Access>
+        <Location left="479" top="463" />
+        <Size width="192" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">UoM Quantity</Member>
+        <Member type="Field">String IngredientDescription</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Keyword</Name>
+        <Access>Public</Access>
+        <Location left="729" top="285" />
+        <Size width="162" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">String Name</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RecipeCard</Name>
+        <Access>Public</Access>
+        <Location left="479" top="298" />
+        <Size width="163" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">String Title</Member>
+        <Member type="Field">String Instructions</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CookedDish</Name>
+        <Access>Public</Access>
+        <Location left="479" top="152" />
+        <Size width="163" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Date CookedDate</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Association" first="1" second="0">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>704</X>
+          <Y>508</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="3" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>555</X>
+          <Y>418</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="2">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.2, Culture=neutral, PublicKeyToken=null">
+    <Name>FunctionalDesign</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>UserProfileRecipeBox</Name>
+        <Access>Public</Access>
+        <Location left="271" top="413" />
+        <Size width="193" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GroceryListItem</Name>
+        <Access>Public</Access>
+        <Location left="1045" top="553" />
+        <Size width="201" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string IngredientDescription</Member>
+        <Member type="Field">string ItemName</Member>
+        <Member type="Field">string Quantity</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UserProfileClientComputer</Name>
+        <Access>Public</Access>
+        <Location left="380" top="689" />
+        <Size width="236" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string ClientDeviceMAC</Member>
+        <Member type="Field">string ClientSystemName</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Keyword</Name>
+        <Access>Public</Access>
+        <Location left="860" top="315" />
+        <Size width="162" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">String Name</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UserProfile</Name>
+        <Access>Public</Access>
+        <Location left="422" top="505" />
+        <Size width="163" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">String FirstName</Member>
+        <Member type="Field">String LastName</Member>
+        <Member type="Field">String eMail</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RecipeBox</Name>
+        <Access>Public</Access>
+        <Location left="404" top="332" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RecipeCard</Name>
+        <Access>Public</Access>
+        <Location left="622" top="315" />
+        <Size width="163" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">String Title</Member>
+        <Member type="Field">String Instructions</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Ingredient</Name>
+        <Access>Public</Access>
+        <Location left="593" top="553" />
+        <Size width="192" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">UoM Quantity</Member>
+        <Member type="Field">String IngredientDescription</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Item</Name>
+        <Access>Public</Access>
+        <Location left="839" top="553" />
+        <Size width="162" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string Name</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GroceryList</Name>
+        <Access>Public</Access>
+        <Location left="1019" top="458" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CookedDish</Name>
+        <Access>Public</Access>
+        <Location left="622" top="183" />
+        <Size width="163" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Date CookedDate</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Association" first="5" second="9">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>532</X>
+          <Y>402</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>993</X>
+          <Y>485</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="8" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1020</X>
+          <Y>600</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1020</X>
+          <Y>600</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>669</X>
+          <Y>508</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="7" second="8">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>*</StartMultiplicity>
+        <EndMultiplicity>0..1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="6" second="10">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>704</X>
+          <Y>290</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="9" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.2, Culture=neutral, PublicKeyToken=null">
+    <Name>BusinessObject</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>BusinessObject</Name>
+        <Access>Public</Access>
+        <Location left="744" top="209" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>IDXDataErrorInfo</Name>
+        <Access>Public</Access>
+        <Location left="982" top="176" />
+        <Size width="163" height="78" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">virtual void GetPropertyError()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>XPObject</Name>
+        <Access>Public</Access>
+        <Location left="744" top="99" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>HeadBusinessObject</Name>
+        <Access>Public</Access>
+        <Location left="729" top="310" />
+        <Size width="177" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string DataStoreSavingErrors</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GroceryList</Name>
+        <Access>Public</Access>
+        <Location left="493" top="450" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Item</Name>
+        <Access>Public</Access>
+        <Location left="786" top="551" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Keyword</Name>
+        <Access>Public</Access>
+        <Location left="899" top="639" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RecipeBox</Name>
+        <Access>Public</Access>
+        <Location left="982" top="321" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RecipeCard</Name>
+        <Access>Public</Access>
+        <Location left="642" top="639" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UserProfile</Name>
+        <Access>Public</Access>
+        <Location left="943" top="464" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UserProfileRecipeBox</Name>
+        <Access>Public</Access>
+        <Location left="527" top="562" />
+        <Size width="185" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CookedDish</Name>
+        <Access>Public</Access>
+        <Location left="422" top="209" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GroceryListItem</Name>
+        <Access>Public</Access>
+        <Location left="438" top="262" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Ingredient</Name>
+        <Access>Public</Access>
+        <Location left="505" top="336" />
+        <Size width="163" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UserProfileClientComputer</Name>
+        <Access>Public</Access>
+        <Location left="505" top="144" />
+        <Size width="222" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Association" first="0" second="1">
+        <Label>implements</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="0" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="3" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="4" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>625</X>
+          <Y>421</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>704</X>
+          <Y>393</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="10" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>692</X>
+          <Y>537</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>740</X>
+          <Y>429</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="8" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>770</X>
+          <Y>430</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>801</X>
+          <Y>432</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>839</X>
+          <Y>439</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="9" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1024</X>
+          <Y>439</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>869</X>
+          <Y>435</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="7" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="14" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>714</X>
+          <Y>214</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="11" second="0">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>718</X>
+          <Y>228</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="12" second="0">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>719</X>
+          <Y>242</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="13" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>661</X>
+          <Y>306</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>775</X>
+          <Y>280</Y>
+        </BendPoint>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.2, Culture=neutral, PublicKeyToken=null">
+    <Name>DxWinElements</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>WinElement</Name>
+        <Access>Public</Access>
+        <Location left="48" top="143" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>IWebElement</Name>
+        <Access>Public</Access>
+        <Location left="48" top="54" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+      </Entity>
+      <Entity type="Class">
+        <Name>DxFormElements&lt;T&gt;</Name>
+        <Access>Public</Access>
+        <Location left="48" top="288" />
+        <Size width="400" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public DxFormElements(DxWinAppDriverSession session)</Member>
+        <Member type="Method">public WinElement FindElementByName(string name)</Member>
+        <Member type="Method">public WinElement Get(T element)</Member>
+        <Member type="Method">public DxGridViewElement&lt;T&gt; FindGridViewElement(T gridViewName)</Member>
+        <Member type="Method">public DxSchedularElement&lt;T&gt; FindSchedularElement(T schedulerControlName)</Member>
+        <Member type="Method">public DxTabControlElement&lt;T&gt; FindTabElement(T tabControlName)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DxWinAppDriverSession</Name>
+        <Access>Public</Access>
+        <Location left="236" top="54" />
+        <Size width="380" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">WindowsDriver&lt;WindowsElement&gt; WinAppDrvrSession</Member>
+        <Member type="Method">public void StartSession(string winAppDriverExePath, string devExWinformAppExePath)</Member>
+        <Member type="Method">public void CloseSession()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DxGridViewElement&lt;T&gt;</Name>
+        <Access>Public</Access>
+        <Location left="236" top="485" />
+        <Size width="436" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public WinElement GetColumnHeader(T columnHeaderName)</Member>
+        <Member type="Method">public WinElement GetCell(int rowNumberOnScreen, T columnHeaderName)</Member>
+        <Member type="Method">public void SelectRows(T columnName, List&lt;string&gt; containingAnyOf)</Member>
+        <Member type="Method">public void SetNumericColumnFilter(T columnName, string minValue, string maxValue = null)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>eRecipeBoxSession</Name>
+        <Access>Public</Access>
+        <Location left="277" top="226" />
+        <Size width="169" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DxSchedularElement&lt;T&gt;</Name>
+        <Access>Public</Access>
+        <Location left="48" top="652" />
+        <Size width="387" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void ScrollFirstDayOfCalendar(DateTime toStartDate)</Member>
+        <Member type="Method">public void SelectDateOnCalendar(DateTime date)</Member>
+        <Member type="Method">public void ClickDateOnDateNavigator(DateTime date)</Member>
+        <Member type="Method">public Appointment GetAppointment(string subjectName, DateTime? onDate = null)</Member>
+        <Member type="Method">public WinElement GetCalendarNextButton()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DxTabControlElement&lt;T&gt;</Name>
+        <Access>Public</Access>
+        <Location left="467" top="309" />
+        <Size width="246" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public WinElement GetTabPage(T tabPageName)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Generalization" first="5" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>369</X>
+          <Y>222</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Realization" first="0" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>113</X>
+          <Y>118</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>113</X>
+          <Y>126</Y>
+        </BendPoint>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.2, Culture=neutral, PublicKeyToken=null">
+    <Name>BodiesOfObjects</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>RecipeBox_H</Name>
+        <Access>Public</Access>
+        <Location left="627" top="323" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RecipeCard_H</Name>
+        <Access>Public</Access>
+        <Location left="694" top="437" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Ingredient</Name>
+        <Access>Public</Access>
+        <Location left="653" top="538" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CookedDish</Name>
+        <Access>Public</Access>
+        <Location left="841" top="538" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Keyword_H</Name>
+        <Access>Public</Access>
+        <Location left="1043" top="437" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Item_H</Name>
+        <Access>Public</Access>
+        <Location left="389" top="538" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GroceryListItem</Name>
+        <Access>Public</Access>
+        <Location left="389" top="416" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GroceryList_H</Name>
+        <Access>Public</Access>
+        <Location left="389" top="311" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UserProfile_H</Name>
+        <Access>Public</Access>
+        <Location left="627" top="227" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UserProfileClientComputer</Name>
+        <Access>Public</Access>
+        <Location left="592" top="114" />
+        <Size width="236" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Association" first="8" second="9">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="8">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>845</X>
+          <Y>529</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>737</X>
+          <Y>512</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="4">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="7" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="7">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

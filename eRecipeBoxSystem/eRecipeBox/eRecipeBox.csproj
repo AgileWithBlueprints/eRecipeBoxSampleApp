@@ -1,0 +1,336 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B673077B-19D0-448F-B536-62A1B9F43A01}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eRecipeBox</RootNamespace>
+    <AssemblyName>eRecipeBox</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v24.1" />
+    <Reference Include="DevExpress.Data.Desktop.v24.1" />
+    <Reference Include="DevExpress.Dialogs.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v24.1.Core" />
+    <Reference Include="DevExpress.Utils.v24.1" />
+    <Reference Include="DevExpress.XtraBars.v24.1" />
+    <Reference Include="DevExpress.Sparkline.v24.1.Core" />
+    <Reference Include="DevExpress.XtraDialogs.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v24.1" />
+    <Reference Include="DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v24.1.Core.Desktop, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v24.1.Extensions, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ImportGPTRecipeCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportGPTRecipeCard.Designer.cs">
+      <DependentUpon>ImportGPTRecipeCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportGPTRecipeCardHelpers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentication\Authenticator.cs" />
+    <Compile Include="Authentication\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentication\LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication\AuthenticatorImpl.cs" />
+    <None Include="AppSingleUser.config" />
+    <None Include="Documentation\eRecipeBoxArtifactsFinal.pdf" />
+    <None Include="Documentation\eRecipeBoxDemoScript.docx" />
+    <None Include="Documentation\eRecipeBoxSprintPlanMVP1_0.mpp" />
+    <None Include="Documentation\Supporting\eRecipeBoxGraphics.pptx" />
+    <None Include="Documentation\Supporting\eRecipeBoxGraphics.vsdx" />
+    <None Include="Documentation\Supporting\eRecipeBoxUML.ncp" />
+    <Compile Include="DataStoreServiceReference\AutomatedTestUtils.cs" />
+    <Compile Include="EditGroceryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditGroceryList.designer.cs">
+      <DependentUpon>EditGroceryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditGroceryListHelpers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRecipeCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRecipeCard.designer.cs">
+      <DependentUpon>EditRecipeCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditRecipeCardHelpers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelperForms\BackupDataStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelperForms\BackupDataStore.Designer.cs">
+      <DependentUpon>BackupDataStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperForms\EditTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelperForms\EditTitle.designer.cs">
+      <DependentUpon>EditTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperForms\ImportRecipeCardPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelperForms\ImportRecipeCardPrompt.Designer.cs">
+      <DependentUpon>ImportRecipeCardPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperForms\RestoreDataStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelperForms\RestoreDataStore.Designer.cs">
+      <DependentUpon>RestoreDataStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportRecipeCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportRecipeCard.designer.cs">
+      <DependentUpon>ImportRecipeCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataStoreServiceReference\DataStoreServiceReference.cs" />
+    <Compile Include="ImportRecipeCardHelpers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Importers\AllrecipesRecipeCardImporter.cs" />
+    <Compile Include="Importers\AllrecipesRecipeCardImporterImpl.cs" />
+    <Compile Include="Importers\GPTRecipeCardImporter.cs" />
+    <Compile Include="Importers\GPTRecipeCardImporterImpl.cs" />
+    <Compile Include="Importers\TextRecipeCardImporter.cs" />
+    <Compile Include="Importers\TextRecipeCardImporterImpl.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipeBoxMDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecipeBoxMDIParent.designer.cs">
+      <DependentUpon>RecipeBoxMDIParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchRecipeBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchRecipeBox.designer.cs">
+      <DependentUpon>SearchRecipeBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchRecipeBoxHelpers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectIngredientsForGroceryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectIngredientsForGroceryList.designer.cs">
+      <DependentUpon>SelectIngredientsForGroceryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectIngredientsForGroceryListHelpers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRecipeCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRecipeCard.designer.cs">
+      <DependentUpon>ViewRecipeCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRecipeCardHelpers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="ImportGPTRecipeCard.resx">
+      <DependentUpon>ImportGPTRecipeCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentication\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditGroceryList.resx">
+      <DependentUpon>EditGroceryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRecipeCard.resx">
+      <DependentUpon>EditRecipeCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelperForms\BackupDataStore.resx">
+      <DependentUpon>BackupDataStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelperForms\EditTitle.resx">
+      <DependentUpon>EditTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelperForms\ImportRecipeCardPrompt.resx">
+      <DependentUpon>ImportRecipeCardPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelperForms\RestoreDataStore.resx">
+      <DependentUpon>RestoreDataStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportRecipeCard.resx">
+      <DependentUpon>ImportRecipeCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RecipeBoxMDIParent.resx">
+      <DependentUpon>RecipeBoxMDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchRecipeBox.resx">
+      <DependentUpon>SearchRecipeBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectIngredientsForGroceryList.resx">
+      <DependentUpon>SelectIngredientsForGroceryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRecipeCard.resx">
+      <DependentUpon>ViewRecipeCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Documentation\eRecipeBoxArtifacts.docx" />
+    <None Include="Documentation\eRecipeBoxArtifactsFinal.docx" />
+    <None Include="Documentation\eRecipeBoxTestSuiteDesign.xlsx" />
+    <None Include="Properties\DataSources\eRecipeBox.HelperForms.RestoreSchemaPrompts.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SQLiteData\recipeTest1SysTest01Master.sqllitedb" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataStoreUtils\DataStoreUtils.csproj">
+      <Project>{03135d99-c0cb-4087-9b7b-fb476e39eb23}</Project>
+      <Name>DataStoreUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Foundation\Foundation.csproj">
+      <Project>{bfeea477-0713-4edd-9811-c3d0a4a18fce}</Project>
+      <Name>Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RecipeBoxSolutionModel\RecipeBoxSolutionModel.csproj">
+      <Project>{795705c9-ed2d-433d-945b-14c8cf5323fe}</Project>
+      <Name>RecipeBoxSolutionModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleCRUDFramework\SimpleCRUDFramework.csproj">
+      <Project>{b51ff83a-a597-48f4-b3f9-5955241ecaa9}</Project>
+      <Name>SimpleCRUDFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Installer\eRecipeBoxInstallerScriptSingleUser.iss" />
+    <None Include="Resources\stretch.svg" />
+    <None Include="Resources\squeeze.svg" />
+    <None Include="Resources\yaxissettings.svg" />
+    <None Include="Resources\support.svg" />
+    <Content Include="Installer\eRecipeBoxInstallerScript.iss" />
+    <None Include="Resources\today.svg" />
+    <None Include="Resources\undo3.svg" />
+    <None Include="Resources\undo2.svg" />
+    <None Include="Resources\refreshallpivottable.svg" />
+    <None Include="Resources\paymentunpaid1.svg" />
+    <None Include="Resources\save2.svg" />
+    <None Include="Resources\saveandclose3.svg" />
+    <None Include="Resources\paymentunpaid.svg" />
+    <None Include="Resources\actions_database.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Xpo">
+      <Version>24.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="HtmlAgilityPack">
+      <Version>1.11.53</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

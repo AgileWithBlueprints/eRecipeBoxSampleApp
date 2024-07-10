@@ -1,0 +1,4 @@
+Due to its size (committing to Git), we maintain the UserEd Help video on Youtube.
+Latest version is here 
+
+https://www.youtube.com/watch?v=aN2cTKdyPwg 

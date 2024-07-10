@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eRecipeBox", "eRecipeBoxSystem\eRecipeBox\eRecipeBox.csproj", "{B673077B-19D0-448F-B536-62A1B9F43A01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foundation", "eRecipeBoxSystem\Foundation\Foundation.csproj", "{BFEEA477-0713-4EDD-9811-C3D0A4A18FCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCRUDFramework", "eRecipeBoxSystem\SimpleCRUDFramework\SimpleCRUDFramework.csproj", "{B51FF83A-A597-48F4-B3F9-5955241ECAA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentGenerator", "eRecipeBoxSystem\DocumentGenerator\DocumentGenerator.csproj", "{A4C8D312-68CB-404B-A1CC-347BFA4712D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStoreUtils", "eRecipeBoxSystem\DataStoreUtils\DataStoreUtils.csproj", "{03135D99-C0CB-4087-9B7B-FB476E39EB23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeBoxSolutionModel", "eRecipeBoxSystem\RecipeBoxSolutionModel\RecipeBoxSolutionModel.csproj", "{795705C9-ED2D-433D-945B-14C8CF5323FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B673077B-19D0-448F-B536-62A1B9F43A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B673077B-19D0-448F-B536-62A1B9F43A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B673077B-19D0-448F-B536-62A1B9F43A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B673077B-19D0-448F-B536-62A1B9F43A01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFEEA477-0713-4EDD-9811-C3D0A4A18FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFEEA477-0713-4EDD-9811-C3D0A4A18FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFEEA477-0713-4EDD-9811-C3D0A4A18FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFEEA477-0713-4EDD-9811-C3D0A4A18FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B51FF83A-A597-48F4-B3F9-5955241ECAA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B51FF83A-A597-48F4-B3F9-5955241ECAA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B51FF83A-A597-48F4-B3F9-5955241ECAA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B51FF83A-A597-48F4-B3F9-5955241ECAA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4C8D312-68CB-404B-A1CC-347BFA4712D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4C8D312-68CB-404B-A1CC-347BFA4712D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4C8D312-68CB-404B-A1CC-347BFA4712D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4C8D312-68CB-404B-A1CC-347BFA4712D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03135D99-C0CB-4087-9B7B-FB476E39EB23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03135D99-C0CB-4087-9B7B-FB476E39EB23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03135D99-C0CB-4087-9B7B-FB476E39EB23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03135D99-C0CB-4087-9B7B-FB476E39EB23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{795705C9-ED2D-433D-945B-14C8CF5323FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{795705C9-ED2D-433D-945B-14C8CF5323FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{795705C9-ED2D-433D-945B-14C8CF5323FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{795705C9-ED2D-433D-945B-14C8CF5323FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {659BD69C-FA5D-4993-A1DE-C9AE6E7E05CC}
+	EndGlobalSection
+EndGlobal
