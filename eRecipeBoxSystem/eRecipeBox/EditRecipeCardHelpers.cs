@@ -53,7 +53,7 @@ namespace eRecipeBox
             this.ratingCountTextEdit.Properties.MinValue = RecipeCard.RatingCountMinValue;
 
             //Hyperlink Title with URL 
-            //#RQT TtlTxtHyptxt Title is displayed either as a readonly text label or readonly hyperlink, depending whether there is a URL.  To edit these, user clicks "Edit Title" button.  System presents a pop up dialog to set both the title and URL.
+            //#RQT TtlTxtHyptxt Title is displayed either as a readonly text label or readonly hyperlink, depending whether there is a URL.  To edit these, user clicks "Edit Title" button.  System presents a pop-up dialog to set both the title and URL.
             this.titleTextEdit.ReadOnly = true;
 
             //#IMPORTANT Note: Set data bindings option for textedits and memoedits to OnPropertyChanged

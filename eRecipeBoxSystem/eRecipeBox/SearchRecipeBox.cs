@@ -431,7 +431,6 @@ then clear
             {
                 foreach (Appointment appt in schedulerControl.SelectedAppointments)
                 {
-                    //#RQT ClndrEntr Enter opens ViewRecipeCard iif one RecipeCard is selected in the Calendar.
                     CookedDishKey key = (CookedDishKey)appt.LabelKey;
                     ShowViewRecipeForm(key.RecipeCardOid);
                 }

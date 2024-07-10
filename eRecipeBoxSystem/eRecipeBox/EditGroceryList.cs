@@ -178,7 +178,7 @@ namespace eRecipeBox
                 string t = groceryList.GenerateHTMLtable();
                 try
                 {
-                    //#RQT GLEmlOAth Email GroceryList to the email address in the user's UserProfile.  The email address must be authorized in Google's OAuth2 email service.
+                    //#RQT GLEmlOAth Email GroceryList to the email address in the user's UserProfile.
                     EmailUtils.SendEmailMessage(toemail, toemail, "grocery list", t);
                     this.statusBarStaticItem.Caption = $"GroceryList sent to email {toemail}";
                 }

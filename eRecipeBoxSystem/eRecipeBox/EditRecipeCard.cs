@@ -164,45 +164,40 @@ namespace eRecipeBox
         #endregion
 
         #region button event handlers
-        //#RQT BtnSvRC Save RecipeCard
         private void barButtonSave_ItemClick(object sender, ItemClickEventArgs e)
         {
             DoSave();
         }
-        //#RQT BtnCnclRC Cancel RecipeCard
         private void barButtonItemCancel_ItemClick(object sender, ItemClickEventArgs e)
         {
             DoCancel();
         }
-        //#RQT BtnSvAndClsRC SaveAndClose RecipeCard
+
         private void barButtonSaveAndClose_ItemClick(object sender, ItemClickEventArgs e)
         {
             DoSaveAndClose();
         }
-        //#RQT BtnDltRC Delete RecipeCard
+
         private void deleteRecipeBarButtonItem_ItemClick(object sender, ItemClickEventArgs e)
         {
             DoDeleteAndClose();
         }
-        //#RQT BtnRfrshRC Refresh RecipeCard
+
         private void reloadBarButtonItem_ItemClick(object sender, ItemClickEventArgs e)
         {
             ReloadModelAndView();
         }
-        //#RQT BtnMvUp Move Up
+
         private void moveUpBarButtonItem_ItemClick(object sender, ItemClickEventArgs e)
         {
             MoveRowUp(this.ingredientsGridView);
         }
 
-        //#RQT BtnMvDwn Move Down
         private void moveDownBarButtonItem_ItemClick(object sender, ItemClickEventArgs e)
         {
             MoveRowDown(this.ingredientsGridView);
         }
 
-        //Delete row based on which grid is focused
-        //#RQT BtnDltRw Delete row
         private void deleteRowBarButtonItem_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (this.ingredientsGridView.IsFocusedView)
@@ -214,14 +209,13 @@ namespace eRecipeBox
 
             UpdateViewState();
         }
-        //#RQT BtnNwRw Insert new row
+
         private void newRowBarButtonItem_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (this.ingredientsGridView.IsFocusedView)
                 InsertFocusedIngredientRow();
         }
 
-        //#RQT BtnAdKywrd Add Keyword
         private void addKeywordSimpleButton_Click(object sender, EventArgs e)
         {
             RecipeCard recipe = (RecipeCard)this.FormHeadBusinessObject;
@@ -234,7 +228,6 @@ namespace eRecipeBox
             recipe.AddKeyword(selectedKey);
         }
 
-        //#RQT BtnIprtRcp Import Recipe 
         private void importRecipeBarButtonItem_ItemClick(object sender, ItemClickEventArgs e)
         {
             ImportRecipeCardPrompt importRecipeCardPrompt = new ImportRecipeCardPrompt();
@@ -329,14 +322,14 @@ namespace eRecipeBox
                 }
             });
         }
-        //#RQT BtnEdGL Edit GroceryList
+
         private void editGroceryListBarButtonItem_ItemClick(object sender, ItemClickEventArgs e)
         {
             int? glOid = DataStoreServiceReference.DataStoreServiceReference.MyGroceryListOid;
             var form = new EditGroceryList(glOid, this.MDIParentForm);
             this.MDIParentForm.FormStack.PushStackAndShowDialogForm(form);
         }
-        //#RQT BtnAdCkdDt Add cooked date
+
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             if (this.addCookedDateDateEdit.EditValue != null)
@@ -350,7 +343,7 @@ namespace eRecipeBox
                 this.addCookedDateDateEdit.EditValue = null;
             }
         }
-        //#RQT BtnAdCkdDtTdy Add today as cooked date
+
         private void addTodaySimpleButton_Click(object sender, EventArgs e)
         {
             DateTime newDate = DateTime.Today;
@@ -361,7 +354,7 @@ namespace eRecipeBox
             this.addCookedDateDateEdit.EditValue = null;
             this.addCookedDateDateEdit.Focus();
         }
-        //#RQT BtnVwRC View RecipeCard
+
         private void viewRecipeBarButtonItem_ItemClick(object sender, ItemClickEventArgs e)
         {
             this.NextFormToOpen = nameof(ViewRecipeCard);

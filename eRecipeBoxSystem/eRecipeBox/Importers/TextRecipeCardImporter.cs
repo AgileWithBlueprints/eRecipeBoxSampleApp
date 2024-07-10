@@ -39,7 +39,7 @@ namespace eRecipeBox.ImportUtils
 
         //Importing a RecipeCard is performed in three steps:
         //1. Create a sequence of lines containing RecipeCard property markers (eg "Title:"), followed by their property values.
-        //2. Parse the individual parts of each Ingredients into its properties.  Use '`' as a delimiter.
+        //2. Parse the individual parts of each Ingredients into its properties.  Use <tab> as a delimiter.
         //3. Import the parsed text lines into a RecipeCard by setting RecipeCard's properties with the text.
 
         /// <summary>

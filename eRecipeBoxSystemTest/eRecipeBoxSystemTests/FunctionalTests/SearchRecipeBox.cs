@@ -415,19 +415,19 @@ namespace eRecipeBoxSystemTests.FunctionalTests
             scheduler.Element.SendKeys(Keys.Control + "v" + Keys.Control); Pause(1);
             scheduler = srb.FindSchedularElement(SRBs.schedulerControl, SRBs.dateNavigator);
             scheduler.Element.Click(); Pause(1);
-            scheduler.Element.SendKeys(Keys.ArrowRight); Pause(); //#TRICKY arrow right to deselect all appts
+            scheduler.Element.SendKeys(Keys.ArrowRight); Pause(2); //#TRICKY arrow right to deselect all appts
 
             LogBreadcrumbOnErecipeBox(srb); // 17
             DateTime start = mondayLess6;
             moveDate = start.AddDays(-4);
-            scheduler.SelectDateOnCalendar(start);
+            scheduler.SelectDateOnCalendar(start); Pause(5);
 
             Win32API.LockControlKey(true);
             try
             {
-                scheduler.GetAllAppointmentsOnDate(start)[0].WinElement.Click(); start = start.AddDays(2); Pause();
-                scheduler.GetAllAppointmentsOnDate(start)[0].WinElement.Click(); start = start.AddDays(1); Pause();
-                scheduler.GetAllAppointmentsOnDate(start)[0].WinElement.Click(); start = start.AddDays(3); Pause();
+                scheduler.GetAllAppointmentsOnDate(start)[0].WinElement.Click(); start = start.AddDays(2); Pause(5);
+                scheduler.GetAllAppointmentsOnDate(start)[0].WinElement.Click(); start = start.AddDays(1); Pause(5);
+                scheduler.GetAllAppointmentsOnDate(start)[0].WinElement.Click(); start = start.AddDays(3); Pause(5);
                 scheduler.GetAllAppointmentsOnDate(start)[0].WinElement.Click();
             }
             finally
