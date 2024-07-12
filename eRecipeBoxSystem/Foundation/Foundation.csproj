@@ -62,6 +62,8 @@
     <None Include="gCredentials.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="gCredentialsDev.json" />
+    <None Include="gCredentialsPublish.json" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Castle.Core">
@@ -74,7 +76,7 @@
       <Version>1.62.0.3182</Version>
     </PackageReference>
     <PackageReference Include="MimeKit">
-      <Version>4.2.0</Version>
+      <Version>4.7.1</Version>
     </PackageReference>
     <PackageReference Include="NLog">
       <Version>5.2.4</Version>
