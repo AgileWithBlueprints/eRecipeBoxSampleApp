@@ -30,6 +30,7 @@ using MimeKit;
 using System;
 using System.IO;
 using System.Net.Mail;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -84,14 +85,15 @@ namespace Foundation
             //#TODO If gmail auth goes wrong (eg, user not authorized) die more gracefully.
             try
             {
-                string gCredentialsFileName = "gCredentials.json";
+                string AssemblyFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                string gCredentialsFilePath = AssemblyFolder + "\\gCredentials.json";
                 UserCredential credential;
                 //From: https://developers.google.com/gmail/api/quickstart/dotnet   obtain a service using oauth 2
                 // Load client secrets.
-                FileInfo fileInfo = new FileInfo(gCredentialsFileName);
+                FileInfo fileInfo = new FileInfo(gCredentialsFilePath);
                 if (!fileInfo.Exists || fileInfo.Length == 0)
                     throw new MissingCredentialsExeption();
-                using (var stream = new FileStream(gCredentialsFileName, FileMode.Open, FileAccess.Read))
+                using (var stream = new FileStream(gCredentialsFilePath, FileMode.Open, FileAccess.Read))
                 {
                     /* The file token.json stores the user's access and refresh tokens, and is created
                      automatically when the authorization flow completes for the first time. */

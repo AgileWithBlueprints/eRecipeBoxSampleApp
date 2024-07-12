@@ -21,13 +21,8 @@
 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 * SOFTWARE.
 */
-using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
 using System;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Drawing;
 using static DxWinAppDriverUtils.DxElementPrimitives;
 namespace DxWinAppDriverUtils
 {
@@ -51,11 +46,11 @@ namespace DxWinAppDriverUtils
             {
                 this.FormElement = new WinElement(ParentSession.FindElementByName(formName));
             }
-            catch (Exception ex)
+            catch
             {
                 //WindowsDriverUtils.Log.WriteLine($"DxFormElements ctor catching for messagebox special case {ex.Message}");
                 //#WORKAROUND MessageBoxes names are their Captions, which need to be Namified.
-                foreach (WinElement child in FindElementsByXPath(this.ParentSession.WinAppDrvrSession,AllDescendants))
+                foreach (WinElement child in FindElementsByXPath(this.ParentSession.WinAppDrvrSession, AllDescendants))
                 {
                     string childName = Namify(Textify(child.GetAttribute("Name")));
                     if (formName == childName)
@@ -87,7 +82,7 @@ namespace DxWinAppDriverUtils
             return new DxSchedularElement<T>(Get(schedulerControlName), Get(dateNavigatorName), this);
         }
         public DxTabControlElement<T> FindTabElement(T tabControlName)
-        {            
+        {
             return new DxTabControlElement<T>(Get(tabControlName), this);
         }
         private WinElement FindElementByName(string name, bool doAssert = true)
@@ -131,7 +126,7 @@ namespace DxWinAppDriverUtils
             }
 
             //#WORKAROUND MessageBox button names need to be Namified.
-            foreach (WinElement child in FindElementsByXPath( this.ParentSession.WinAppDrvrSession, AllDescendants))
+            foreach (WinElement child in FindElementsByXPath(this.ParentSession.WinAppDrvrSession, AllDescendants))
             {
                 string childName = Namify(Textify(child.GetAttribute("Name")));
                 WindowsDriverUtils.Log.WriteLine(childName);
@@ -140,7 +135,7 @@ namespace DxWinAppDriverUtils
                     result = child;
                     return result;
                 }
-            }            
+            }
             throw new Exception($"{elementName} not found");
         }
     }
