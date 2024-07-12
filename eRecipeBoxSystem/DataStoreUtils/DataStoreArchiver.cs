@@ -70,7 +70,7 @@ namespace DataStoreUtils
         public delegate void CreateOneOfEach(UnitOfWork unitOfWork);
         public string RestoreDataStore(string fromBackupFolder, string targetXpoConnectionString, CreateOneOfEach createOneOfEach, Type[] persistentTypes)
         {
-            //#NOTE this fails for postgres npgsql v8, so back reved to V702 DevX T1217611
+            //#NOTE this fails for postgres npgsql v8, so back reved to V702 DevX T1217611  T1214861
             IDataLayer DL = XpoDefault.GetDataLayer(targetXpoConnectionString, AutoCreateOption.DatabaseAndSchema);
             DbProvider provider = XpoService.GetDbProvider(targetXpoConnectionString);
 
@@ -95,6 +95,7 @@ namespace DataStoreUtils
             }
             else if (provider == DbProvider.SQLSERVER || provider == DbProvider.NPGSQL)
             {
+                //#WORKAROUND FRAGILE unable to run this with supabase, authority prob
                 if (!targetXpoConnectionString.ToLower().Contains("supabase"))
                 {
                     string scriptPath = $"{fromBackupFolder}\\{SchemaDdlFileName}";
@@ -110,6 +111,7 @@ namespace DataStoreUtils
                 throw new NotImplementedException($"Restore for {provider} not supported.");
 
             bool disableAllIndexes = true;
+            //#WORKAROUND FRAGILE unable to run this with supabase, authority prob
             if (targetXpoConnectionString.ToLower().Contains("supabase"))
                 disableAllIndexes = false;
             //Load data into the tables
