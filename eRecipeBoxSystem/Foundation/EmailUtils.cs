@@ -97,7 +97,7 @@ namespace Foundation
                 {
                     /* The file token.json stores the user's access and refresh tokens, and is created
                      automatically when the authorization flow completes for the first time. */
-                    string credPath = "token.json";
+                    string credPath = AssemblyFolder + "\\token.json";
                     credential = Task.Run(() => GoogleWebAuthorizationBroker.AuthorizeAsync(
                         GoogleClientSecrets.FromStream(stream).Secrets,
                         Scopes,
