@@ -4,11 +4,6 @@ This repo complements the eBook _How I Built a Business App using Agile w/ Bluep
 
 The book introduces AwB through a complete, instructional, working example - this eRecipeBox app. [This video](https://www.agilewithblueprints.com/home/#ViewSampleAppVideo) illustrates the app in action. Together, they form the AwB Quick Start. The eBook educates the reader on AwB’s core engineering practices, introduces AwB’s framework, then narrates how the team built eRecipeBox MVP 1.0 over the span of five, one-week sprints. Readers study the sample app while working through the eBook.
 
-[The eRecipeBox downloads page](https://www.agilewithblueprints.com/erecipebox-downloads) provides links to download:
-
-- Installer for eRecipeBox App-Single User: A single user version so users can test drive the app.
-- eRecipeBox Source Package: A self-extracting zip containing all eRecipeBox product artifacts and source code, which are the contents of this repo.
-
 _Individuals_ build their skills by enhancing eRecipeBox. In addition, entire AwB _teams_ develop their skills working as a team. Assign members to their AwB role(s) and, together, enhance eRecipeBox over a couple of sprints. In addition to developing individual Agile w/ Blueprints skills, the team as a whole develops its AwB proficiency by establishing a productive culture & communication style of their own.
 
 Agile w/ Blueprints is unique because it's comprehensive, covering all aspects required to develop a business application:
@@ -61,6 +56,11 @@ This repo contains all eRecipeBox Agile w/ Blueprints artifacts:
 ![Agile](images/AwBframework.png)
 
 All eRecipeBox documentation can be found in …\\eRecipeBoxSystem\\ eRecipeBox\\ Documentation. The eBook and eRecipeBox documentation provide links to instructional videos for key aspects of the process.
+
+[The eRecipeBox downloads page](https://www.agilewithblueprints.com/erecipebox-downloads) provides links to download:
+
+- Installer for eRecipeBox App-Single User: A single user version so users can test drive the app.
+- eRecipeBox Source Package: A self-extracting zip containing all eRecipeBox product artifacts and source code, which are the contents of this repo.
 
 Architects, developers, and testers follow steps in the Dev Team Environment section to build their own local dev environment. The remaining team members download and install eRecipeBox App-Single User version so they can test drive the app.
 
