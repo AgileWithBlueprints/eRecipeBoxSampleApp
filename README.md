@@ -51,15 +51,13 @@ Team members understand their role and how their project decisions impact other 
 
 # How to Use this Agile w/ Blueprints Quick Start
 
-1. Read the eBook, which covers AwB as it presents the eRecipeBox working sample app and narrates how it was developed. Architects and developers, including Test, install the [eRecipeBox Source Package](https://www.agilewithblueprints.com/erecipebox-downloads) and review, build, and run their respective code. The remaining team roles install the [RecipeBox App-Single User](https://www.agilewithblueprints.com/erecipebox-downloads) so they can test drive it while reviewing the eBook.
+1. [Read the eBook](https://www.amazon.com/Built-Business-using-Agile-Blueprints-ebook/dp/B0D99237RB/ref=sr_1_10?crid=8F9NSEQZAPIM&dib=eyJ2IjoiMSJ9.kLLgXG8VJkJ7zpQlBz9g_fbMEDLTQ0fpIULS3iPGb0YFBSMXWYkXdPsUkMq1P62VQNxBPwiVxvy_5QSaOT9jzlCUCsLS__4qOwTEE9NRIalTE2rUOKUSi5On51vllymuwNF0Zjq9TLySKrPUAn0EPB2s0unrHy12rV8XOoc_noJB_PRWKn1bBn417fkZgjLKnpJ5oxJTUsqRk-T4rh7ioWGfeF6vMnF6UazOSEeJi98.LBkwL8892pzeDeO7gxSOwSIXLj8oamV2H9_CVzn1O1k), which covers AwB as it presents the eRecipeBox working sample app and narrates how it was developed. Architects and developers, including Test, install the [eRecipeBox Source Package](https://www.agilewithblueprints.com/erecipebox-downloads) and study, build, and run their respective code. The remaining team roles install the [RecipeBox App-Single User](https://www.agilewithblueprints.com/erecipebox-downloads) so they can test drive it while reviewing the eBook.
 2. Select a few enhancements and implement them in their eRecipeBox sandbox dev and test environment(s). Update all impacted artifacts - Business Model through Implementation, Test Strategy through Test Cases, and User Education Strategy through UE Implementation.
 3. When comfortable with AwB engineering practices and skills, use the eRecipeBox artifacts as templates for your business app development project.
 
 # Repo Contents
 
 This repo contains all eRecipeBox Agile w/ Blueprints artifacts:
-
-![Agile](images/AwBframework.png)
 
 All eRecipeBox documentation can be found in …\\eRecipeBoxSystem\\ eRecipeBox\\ Documentation. The eBook and eRecipeBox documentation provide links to instructional videos for key aspects of the process.
 
