@@ -58,7 +58,7 @@ Team members understand their role and how their project decisions impact other 
 # Repo Contents
 
 This repo contains all eRecipeBox Agile w/ Blueprints artifacts:
-
+![Agile](images/AwBframework.png)
 All eRecipeBox documentation can be found in …\\eRecipeBoxSystem\\ eRecipeBox\\ Documentation. The eBook and eRecipeBox documentation provide links to instructional videos for key aspects of the process.
 
 [The eRecipeBox downloads page](https://www.agilewithblueprints.com/erecipebox-downloads) provides links to download:
