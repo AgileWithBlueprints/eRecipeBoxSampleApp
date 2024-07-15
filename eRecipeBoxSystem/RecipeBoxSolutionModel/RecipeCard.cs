@@ -454,7 +454,7 @@ namespace RecipeBoxSolutionModel
         public bool AddCookedDish(CookedDish cr)
         {
             //TODO BUG student exercise.  2 apps adding same KW.  have them find this in test.   need SP
-            //#RQT Don't add duplicate CookedDish dates for a RecipeCard.  Adding a date that already exists is a no-op.
+            //#RQT CkdDshDtNoDup Don't add duplicate CookedDish dates for a RecipeCard.  Adding a date that already exists is a no-op.
             if (this.FindCookedDish(cr.CookedDate) == null)
             {
                 CookedInstances.Add(cr);

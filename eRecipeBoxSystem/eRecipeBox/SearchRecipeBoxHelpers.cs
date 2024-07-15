@@ -579,8 +579,6 @@ new ViewProperty("RCTitle", SortDirection.None, "[RecipeCard.Title]",false, true
             //So AtmtdTstng needs to send shortcuts to clicke the buttons
             //https://supportcenter.devexpress.com/ticket/details/t525424/how-do-i-activate-click-a-button-in-a-grid-cell-using-the-keyboard
 
-
-            //#RQT ShCut Shft-e (Edit LastCookedDate), Shft-a (Add New CookedDate), Shft-d (Delete LastCookedDate)
             //#AtmtdTstng
             edtLstCkdDateBtn.Buttons[0].Shortcut = new DevExpress.Utils.KeyShortcut(Keys.Shift | Keys.E);
 
@@ -614,8 +612,7 @@ new ViewProperty("RCTitle", SortDirection.None, "[RecipeCard.Title]",false, true
             myScoreEdit.Buttons[0].Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph;
             myScoreEdit.Buttons[0].Image = editImage;
 
-            //#AtmtdTstng
-            //#RQT ShCut Shft-e (Edit MyRating) 
+            //#AtmtdTstng            
             myScoreEdit.Buttons[0].Shortcut = new DevExpress.Utils.KeyShortcut(Keys.Shift | Keys.E);
             //#RQT GrdEdtMyRtng Edit myRating in the grid 
             myScoreEdit.ButtonClick += myScoreEdit_ButtonClick;

@@ -65,9 +65,9 @@ namespace eRecipeBox
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //#RQT Importing a RecipeCard is performed in three steps:
-            //#RQT 1. Create a sequence of lines containing RecipeCard property markers (eg "Title:"), followed by their property values.
-            //#RQT 2. Parse the individual parts of each Ingredients into its properties.  Use <tab> as a delimiter.            
+            //#RQT 1ImprtRcpCrdFrm Importing a RecipeCard is performed in three steps:
+            //#RQT 1ImprtRcpCrdFrm 1. Create a sequence of lines containing RecipeCard property markers (eg "Title:"), followed by their property values.
+            //#RQT 1ImprtRcpCrdFrm 2. Parse the individual parts of each Ingredients into its properties.  Use <tab> as a delimiter.            
             string[] lines = this.memoEdit1.Text.Split(new string[] { System.Environment.NewLine }, StringSplitOptions.None);
             IList<string> parsed = importer.ParseTextAndAddFieldDelimiters(lines);
             this.memoEdit1.Text = string.Join(PrimitiveUtils.newl, parsed);

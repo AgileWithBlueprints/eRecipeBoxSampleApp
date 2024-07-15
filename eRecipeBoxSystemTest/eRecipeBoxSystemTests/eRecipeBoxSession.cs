@@ -57,6 +57,8 @@ namespace eRecipeBoxSystemTests
         {
             string eRecipeBoxBinFolder = ConfigurationManager.AppSettings["eRecipeBoxBinFolder"];
             eRecipeBoxLogFolder = eRecipeBoxBinFolder + @"\LogFiles";
+
+            //#TODO we shouldnt need to copy these.  remove them and test
             eRecipeBoxExePath = eRecipeBoxBinFolder + @"\eRecipeBox.exe";
             string gmailOAuthCredentialsJsonPath = eRecipeBoxBinFolder + @"\gCredentials.json";
             string gmailOAuthtokenjsonFolder = eRecipeBoxBinFolder + @"\token.json";

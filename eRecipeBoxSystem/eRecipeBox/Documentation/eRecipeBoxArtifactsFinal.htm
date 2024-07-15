@@ -3550,11 +3550,14 @@ ul
 <div class=WordSection1>
 
 <p class=MsoNormal align=center style='text-align:center'><span
-class=MsoBookTitle><span style='font-size:20.0pt;line-height:110%'>eRecipeBox
+class=MsoBookTitle><span style='font-size:20.0pt;line-height:110%'>RecipeBox
 Blueprints</span></span></p>
 
 <p class=MsoNormal align=center style='text-align:center'><span
 class=MsoBookTitle><span style='font-size:20.0pt;line-height:110%'>MVP 1.0</span></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+class=MsoBookTitle><span style='font-size:20.0pt;line-height:110%'>&nbsp;</span></span></p>
 
 <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:110%'>Table of
 Contents</span> </b></p>
@@ -4776,7 +4779,8 @@ product roadmap.</p>
 style='font:7.0pt "Times New Roman"'> </span>MVP 1.0 Project</a></h5>
 
 <h6><a name="_Toc144967826"></a><a name="_Toc171506161">3.1.2.3.1.1<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Release Features/Functions</a></h6>
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Release
+Features/Functions</a></h6>
 
 <p class=MsoNormal>MVP 1.0 scope is summarized in the Roadmap above.</p>
 
@@ -6164,8 +6168,8 @@ functional requirements specify the static &amp; dynamic behavior of the system
 (i.e., think nouns and verbs, “the System does X”), non-functional requirements
 qualify and quantify the functional requirements (i.e., think adjectives and adverbs,
 “the System does X fast/reliable/maintainable” or “Data is small/medium/large/colossal”).
-This is analogous to specifying the expected annual utilities/annual maintenance
-cost/lifespan when building a custom home.</p>
+This is analogous to specifying the expected annual utilities/annual
+maintenance cost/lifespan when building a custom home.</p>
 
 <h6><a name="_Toc102396119"></a><a name="_Toc144967853"></a><a
 name="_Toc171506190"></a><a name="_Toc144131223"></a><a name="_Toc144197672">3.1.3.3.2.1<span
@@ -6465,9 +6469,9 @@ style='font:7.0pt "Times New Roman"'> </span>Scalable, Serverless Design</a></h5
 <p class=MsoNormal>eRecipeBox is built on SimpleCRUDFramework that encapsulates
 all of the common behavior for CRUDing business objects using DevExpress’ WinForms
 Ribbon-Based Application framework as well as implementing a simple FormStack
-for GUI window management. DevExpress’ framework is implemented as a Microsoft Multiple
-Document Interface (MDI) application. BusinessObject subclasses DevExpress XPO.XPObject
-who serves as our ORM to synchronize the Model and the DataStore.</p>
+for GUI window management. DevExpress’ framework is implemented as a Microsoft
+Multiple Document Interface (MDI) application. BusinessObject subclasses
+DevExpress XPO.XPObject who serves as our ORM to synchronize the Model and the DataStore.</p>
 
 <p class=MsoNormal align=center style='text-align:center'><img border=0
 width=721 height=430 src="eRecipeBoxArtifactsFinal_files/image025.jpg"></p>
@@ -6818,11 +6822,11 @@ references.</p>
 <p class=MsoNormal><b>Uniqueness validation and enforcement - Design</b></p>
 
 <p class=MsoNormal>Some properties must be unique across other business
-objects; often business keys visible to the end user such as Account Number,
-Customer ID, etc. Enforce uniqueness by creating a database unique index or
-constraint. Use HeadBusinessObject. GenerateUniqueConstraintName to generate
-the name for the constraint. Create the constraint in the DataStoreService app
-server startup logic (specifically, its static CreateDataStore method). During
+objects; often business keys visible to the end user such as Account Number, Customer
+ID, etc. Enforce uniqueness by creating a database unique index or constraint.
+Use HeadBusinessObject. GenerateUniqueConstraintName to generate the name for
+the constraint. Create the constraint in the DataStoreService app server
+startup logic (specifically, its static CreateDataStore method). During
 SaveModel, if attempting to save a duplicate property, the DataStore raises the
 constraint which propagates to the client. CRUDBusinessObjectForm.ProcessDataStoreException
 catches the exception, extracts the property, matches it to the DataStore check
@@ -6905,20 +6909,17 @@ Windows user account.</p>
 Windows User Name and MAC Address into WCF user and pw, sends to UserNamePasswordValidator
 on server who performs validation. Rejects WCF connection if error.</p>
 
+<p class=MsoNormal>Encrypt DataStore passwords, Azure &amp; Openai API keys in
+the app.config.</p>
+
+<p class=MsoNormal>User can only search their RecipeBox RecipeCards implemented
+by joining to RecipeBox when running filter.</p>
+
 <h4><a name="_Toc144131232"></a><a name="_Toc144197681"></a><a
 name="_Toc144967871"></a><a name="_Toc171506214">3.1.4.3<span style='font:7.0pt "Times New Roman"'>&nbsp;
 </span>Concurrency </a>Design</h4>
 
-<p class=MsoNormal><a name="_Hlk171419691">eRecipeBox supports multiple,
-simultaneous users using XPO’s optimistic concurrency feature with its soft
-delete option. CRUD forms modify a body of BusinessObjects. CommitChanges()
-saves only the objects within the body of BusinessObjects that were modified. If
-another session simultaneously modifies any one of the same BusinessObjects in
-the UnitOfWork, an optimistic concurrency exception is thrown. As a result,
-different parts of body can be modified simultaneously by two different
-sessions (e.g., edit different Ingredients within a RecipeCard). </a></p>
-
-<p class=MsoNormal><b>Optimistic concurrency– Design</b></p>
+<p class=MsoNormal><a name="_Hlk171419691"><b>Optimistic concurrency– Design</b></a></p>
 
 <p class=MsoNormal>eRecipeBox supports multiple, simultaneous users using XPO’s
 optimistic concurrency feature with its soft delete option. CRUD forms modify a
@@ -8431,7 +8432,8 @@ PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
-   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Rating Count</p>
+   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Rating
+   Count</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
@@ -8579,7 +8581,8 @@ PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
-   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>GC Record</p>
+   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>GC
+   Record</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
@@ -8719,8 +8722,7 @@ PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
   <tr>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
-   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>User
-   Profile</p>
+   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>User Profile</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
@@ -8744,7 +8746,8 @@ PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
   <tr>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
-   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>User Profile</p>
+   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>User
+   Profile</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
@@ -8846,7 +8849,8 @@ PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
   <tr>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
-   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>User Profile</p>
+   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>User
+   Profile</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
@@ -9173,8 +9177,7 @@ PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
-   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>User
-   Profile</p>
+   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>User Profile</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
@@ -9601,14 +9604,14 @@ to deliver MVP 1.0 ASAP, we chose to call them from the client. Longer term Gmai
 and GPT interfaces definitely belong on the server (and perhaps also AllRecipes
 &amp; Azure). Moving some or all of them to the app server is left as a student
 hands-on exercise. The Solution Model is not impacted. We only need to update
-the Component Design to reflect our decision change.</p>
+the Topology Design to reflect our decision change.</p>
 
 <p class=MsoNormal>==============</p>
 
 <p class=MsoNormal>As noted in the <a href="#_Component_Design">Component
 Design</a>, eRecipeBox client can be deployed in 2-tier configuration by
-modifying settings in the app.config. This makes development easier, supports
-the SingleUser configuration (using SQLite). The projects deploys SingleUser
+modifying settings in the app.config. This makes development easier, and
+supports the SingleUser configuration (using SQLite). The projects deploys SingleUser
 versions to the business team after each Sprint so they can experience the app
 and provide more valuable feedback. See <a href="#_Production_Environment">Production
 Environment</a> for app.config settings. </p>
@@ -9715,10 +9718,10 @@ color:black'> [</span><span style='font-size:9.5pt;line-height:110%;font-family:
 
 <p class=MsoNormal>&nbsp;</p>
 
-<p class=MsoNormal>Use descriptive names for identifiers. Descriptive
-identifiers communicate in calling code as well as declaring code. The goal is
-to minimize the need for comments, which tend to get out of sync over time. For
-example, this doesn’t need a comment.</p>
+<p class=MsoNormal>Use descriptive names for identifiers. Descriptive identifiers
+communicate in calling code as well as declaring code. The goal is to minimize
+the need for comments, which tend to get out of sync over time. For example,
+this doesn’t need a comment.</p>
 
 <p class=MsoNormal><span style='font-size:9.5pt;line-height:110%;font-family:
 "Cascadia Mono";color:blue'>public</span><span style='font-size:9.5pt;
@@ -9886,7 +9889,7 @@ the .iss script run it</p>
 
 <p class=MsoNormal style='margin-bottom:0in'><b>Commentary:</b> For projects
 with larger teams, document the continuous integration (CI) process in this
-section, e.g., Commit code, push to remote repo, trigger IC pipeline (pull
+section, e.g., Commit code, push to remote repo, trigger CI pipeline (pull
 latest, run static code analysis, manage dependencies, build, run tests, run
 dynamic analysis and security scans, generate test &amp; coverage reports,
 notify stakeholders, package &amp; archive release, deploy release)</p>
@@ -10215,9 +10218,9 @@ test data required for the Test Suite. </p>
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:.25in;text-indent:-.25in;line-height:normal'>3.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Test
-Suites:</b> Each Test Suite contains a set of Test Cases. Each Test Case
-narrates a sequence of Test Steps and their expected results. Test Cases can be
-manual or automated test scripts.</p>
+Suites:</b> Each Test Suite contains a set of Test Cases. Each Test Case narrates
+a sequence of Test Steps and their expected results. Test Cases can be manual
+or automated test scripts.</p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
 
@@ -10677,10 +10680,10 @@ replicated to 25,000 RecipeBoxes)</p>
 
 <p class=MsoNormal><b>DISCLAIMER: </b></p>
 
-<p class=MsoNormal>This sample business app, including its accompanying test
-dataset, is provided for educational and learning purposes only. Users are
-encouraged to explore the features of the app and experiment with the test data
-as part of their leaning process</p>
+<p class=MsoNormal>This sample business app, including its accompanying test dataset,
+is provided for educational and learning purposes only. Users are encouraged to
+explore the features of the app and experiment with the test data as part of
+their leaning process</p>
 
 <p class=MsoNormal>However, redistribution or sharing of the test dataset
 outside the context of this sample app is strictly prohibited. The test dataset
@@ -10987,7 +10990,7 @@ over a local TCP socket.</p>
 
 <h4><a name="_Toc144131260"></a><a name="_Toc144197709"></a><a
 name="_Toc144967900"></a><a name="_Toc171506243">3.2.4.3<span style='font:7.0pt "Times New Roman"'>&nbsp;
-</span>Topology Design</a></h4>
+</span>Automated System Test Topology Design</a></h4>
 
 <p class=MsoNormal align=center style='text-align:center'><img border=0
 width=697 height=132 id="Picture 8"
@@ -11284,8 +11287,7 @@ team and assigns individuals to each of these roles.</p>
  <tr>
   <td nowrap valign=top style='border:solid windowtext 1.0pt;border-top:none;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>IT
-  Executive</p>
+  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>IT Executive</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
@@ -11535,7 +11537,8 @@ team and assigns individuals to each of these roles.</p>
  <tr>
   <td nowrap valign=top style='border:solid windowtext 1.0pt;border-top:none;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Test Developer</p>
+  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Test
+  Developer</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
@@ -11661,8 +11664,8 @@ MVP 1.0.</p>
  <tr>
   <td width="23%" nowrap valign=top style='width:23.86%;border:solid windowtext 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Business Executive
-  Sponsor</p>
+  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Business
+  Executive Sponsor</p>
   </td>
   <td width="10%" valign=top style='width:10.66%;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -11868,8 +11871,7 @@ MVP 1.0.</p>
  <tr>
   <td width="23%" nowrap valign=top style='width:23.86%;border:solid windowtext 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>System
-  Architect</p>
+  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>System Architect</p>
   </td>
   <td width="10%" valign=top style='width:10.66%;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -11948,8 +11950,7 @@ MVP 1.0.</p>
   <td width="10%" valign=top style='width:10.66%;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>N.
-  Architect</p>
+  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>N. Architect</p>
   </td>
   <td width="65%" valign=top style='width:65.5%;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -12233,8 +12234,7 @@ name="_Risk_Assessment"></a>5.2.1<span style='font:7.0pt "Times New Roman"'>&nbs
  <tr>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Data
-  Security</p>
+  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Data Security</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
@@ -12342,13 +12342,12 @@ width=720 height=870 id="Picture 2"
 src="eRecipeBoxArtifactsFinal_files/image060.jpg"></p>
 
 <h2><a name="_Toc102396136"></a><a name="_Toc123910820"></a><a
-name="_Toc131495980"></a><a name="_Toc144131085"></a><a name="_Toc144131273"></a><a
-name="_Toc144197722"></a><a name="_Toc144967925"></a><a name="_Toc171506263"></a><a
 name="_Environments"></a>5.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
-</span>Environments</h2>
+</span>Support the Process</h2>
 
 <p class=MsoNormal>Each team needs a work environment to develop their
-artifacts – Development, Test, UE, Production (i.e., the Business Team). </p>
+artifacts – Project Leadership, Development, Test, UE, Production (i.e., the Business
+Team). </p>
 
 <p class=MsoNormal align=center style='text-align:center'><img border=0
 width=489 height=195 id="Picture 21"
@@ -12395,8 +12394,7 @@ style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nb
 
 <p class=MsoListParagraphCxSpFirst style='margin-left:.25in;text-indent:-.25in'><span
 style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Microsoft Office 2019 or greater – Word, Excel, Visio and
-Powerpoint</p>
+</span></span>Microsoft Office 2019 or greater – Word, Excel, Visio and PowerPoint</p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-left:.25in;text-indent:-.25in'><span
 style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -12409,7 +12407,7 @@ style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nb
 
 <p class=MsoNormal>The DocumentGenerator project generates the final version of
 the artifacts document by inserting detailed business rule and UI form
-requirements into the Manly edited eRecipeBox artifacts document.</p>
+requirements into eRecipeBoxArtifacts.docx.</p>
 
 <p class=MsoNormal>DocumentGenerator</p>
 
@@ -12700,7 +12698,8 @@ style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Copy
 the PostgreSQL’s “Recipes” connection string value from eRecipeBox app.config
 (starting with <span style='font-size:9.5pt;font-family:"Cascadia Mono";
 color:blue'>XpoProvider=Postgres</span>) into the “New Schema XPO Connection
-String” textbox. Replace the password placeholder with your password (NOT ENCRYPTED).</p>
+String” textbox. Replace the password placeholder with your password (NOT
+ENCRYPTED).</p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
 margin-bottom:0in;margin-left:.25in;text-indent:-.25in;line-height:normal'>9.<span
@@ -13177,7 +13176,8 @@ should see this</a>. </p>
 margin-bottom:0in;margin-left:.25in;text-indent:-.25in;line-height:normal'>7.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Note:
 The system test needs to start with a known DataStore, so always restore
-recipeTest1.bak before running BusinessTests.Business01.</p>
+recipeTest1.bak before running BusinessTests. BusinessTests. TestCase01 and
+FuntionalTests. SearchRecipeBox. TestCase01.</p>
 
 <p class=MsoListParagraphCxSpLast style='margin-top:0in;margin-right:0in;
 margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:107%'>8.<span
@@ -13244,10 +13244,8 @@ configurations.</p>
 <p class=MsoNormal>Local, single user configuration stores all RecipeCards in a
 local, SQLite database file.</p>
 
-<p class=NormalSmaller>Edit C:\Users\&lt;user
-name&gt;\AppData\Local\Programs\eRecipeBox\eRecipeBox.exe.config</p>
-
-<p class=MsoNormal>Ensure UseWCF is false </p>
+<p class=NormalSmaller>Replace the contents of C:\Users\&lt;user
+name&gt;\AppData\Local\Programs\eRecipeBox\eRecipeBox.exe.config with AppSingleUser.config.</p>
 
 <p class=MsoNormal>Use the following Recipes connection setting</p>
 
