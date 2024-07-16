@@ -1,6 +1,6 @@
 # eRecipeBox Sample App
 
-This repo complements the eBook _How I Built a Business App using "Agile w/ Blueprints",_ [available on Amazon](https://www.amazon.com/Built-Business-using-Agile-Blueprints-ebook/dp/B0D99237RB/ref=sr_1_10?crid=8F9NSEQZAPIM&dib=eyJ2IjoiMSJ9.kLLgXG8VJkJ7zpQlBz9g_fbMEDLTQ0fpIULS3iPGb0YFBSMXWYkXdPsUkMq1P62VQNxBPwiVxvy_5QSaOT9jzlCUCsLS__4qOwTEE9NRIalTE2rUOKUSi5On51vllymuwNF0Zjq9TLySKrPUAn0EPB2s0unrHy12rV8XOoc_noJB_PRWKn1bBn417fkZgjLKnpJ5oxJTUsqRk-T4rh7ioWGfeF6vMnF6UazOSEeJi98.LBkwL8892pzeDeO7gxSOwSIXLj8oamV2H9_CVzn1O1k) for $9.99. “Agile w/ Blueprints” (AwB) is a lightweight yet comprehensive process for building production-quality business applications. Evolved and refined over 20 years by a pragmatic practitioner, it applies proven best practices for small—to medium-sized teams to quickly and efficiently develop software solutions that solve business problems.
+This repo complements the eBook _How I Built a Business App using “Agile w/ Blueprints”,_ [available on Amazon](https://www.amazon.com/Built-Business-using-Agile-Blueprints-ebook/dp/B0D99237RB/ref=sr_1_10?crid=8F9NSEQZAPIM&dib=eyJ2IjoiMSJ9.kLLgXG8VJkJ7zpQlBz9g_fbMEDLTQ0fpIULS3iPGb0YFBSMXWYkXdPsUkMq1P62VQNxBPwiVxvy_5QSaOT9jzlCUCsLS__4qOwTEE9NRIalTE2rUOKUSi5On51vllymuwNF0Zjq9TLySKrPUAn0EPB2s0unrHy12rV8XOoc_noJB_PRWKn1bBn417fkZgjLKnpJ5oxJTUsqRk-T4rh7ioWGfeF6vMnF6UazOSEeJi98.LBkwL8892pzeDeO7gxSOwSIXLj8oamV2H9_CVzn1O1k) for $9.99. “Agile w/ Blueprints” (AwB) is a lightweight yet comprehensive process for building production-quality business applications. Evolved and refined over 20 years by a pragmatic practitioner, it applies proven best practices for small to medium-sized teams to quickly and efficiently develop software solutions that solve business problems.
 
 The book introduces AwB through a complete, instructional, working example - this eRecipeBox app. [This video](https://www.agilewithblueprints.com/home/#ViewSampleAppVideo) illustrates the app in action. Together, they form the AwB Quick Start. The eBook educates the reader on AwB’s core engineering practices, introduces AwB’s framework, then narrates how the team built eRecipeBox MVP 1.0 over the span of five, one-week sprints. Readers study the sample app while working through the eBook.
 
@@ -27,6 +27,8 @@ This eRecipeBox sample app illustrates how all artifacts integrate and influence
 - How to create a risk-driven sprint plan
 - How domain & object driven development drive design and implementation
 - How to design a reusable UI framework that supports CRUDing business data and UI window navigation
+- How to use Google email services with OAuth2
+- How to integrate OpenAI services into your business application
 - How to design and implement automated system tests
 - How to minimize effort documenting requirements by extracting detailed requirements from source code
 - How to use automation to generate large test data sets for stress testing
@@ -58,6 +60,7 @@ Team members understand their role and how their project decisions impact other 
 # Repo Contents
 
 This repo contains all eRecipeBox Agile w/ Blueprints artifacts:
+
 ![Agile](images/AwBframework.png)
 
 All eRecipeBox documentation can be found in …\\eRecipeBoxSystem\\ eRecipeBox\\ Documentation. The eBook and eRecipeBox documentation provide links to instructional videos for key aspects of the process.
