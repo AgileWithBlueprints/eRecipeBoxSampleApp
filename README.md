@@ -35,7 +35,7 @@ This eRecipeBox sample app illustrates how all artifacts integrate and influence
 
 # Audience
 
-Because the process is comprehensive, the eBook’s target audience is all roles of a project team:
+Because the process is comprehensive, the eBook’s target audience includes all roles of a project team:
 
 - Executive Sponsors
 - Business Users
