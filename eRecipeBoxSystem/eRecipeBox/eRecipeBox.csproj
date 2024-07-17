@@ -102,8 +102,6 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Authentication\AuthenticatorImpl.cs" />
-    <None Include="App1Dev.config" />
-    <None Include="AppPublish.config" />
     <None Include="AppSingleUser.config" />
     <None Include="Documentation\eRecipeBoxArtifactsFinal.pdf" />
     <None Include="Documentation\eRecipeBoxReleaseNotes.docx" />
