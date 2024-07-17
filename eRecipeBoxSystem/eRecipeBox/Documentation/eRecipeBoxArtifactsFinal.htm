@@ -4779,8 +4779,7 @@ product roadmap.</p>
 style='font:7.0pt "Times New Roman"'> </span>MVP 1.0 Project</a></h5>
 
 <h6><a name="_Toc144967826"></a><a name="_Toc171506161">3.1.2.3.1.1<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Release
-Features/Functions</a></h6>
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Release Features/Functions</a></h6>
 
 <p class=MsoNormal>MVP 1.0 scope is summarized in the Roadmap above.</p>
 
@@ -6168,8 +6167,8 @@ functional requirements specify the static &amp; dynamic behavior of the system
 (i.e., think nouns and verbs, “the System does X”), non-functional requirements
 qualify and quantify the functional requirements (i.e., think adjectives and adverbs,
 “the System does X fast/reliable/maintainable” or “Data is small/medium/large/colossal”).
-This is analogous to specifying the expected annual utilities/annual
-maintenance cost/lifespan when building a custom home.</p>
+This is analogous to specifying the expected annual utilities/annual maintenance
+cost/lifespan when building a custom home.</p>
 
 <h6><a name="_Toc102396119"></a><a name="_Toc144967853"></a><a
 name="_Toc171506190"></a><a name="_Toc144131223"></a><a name="_Toc144197672">3.1.3.3.2.1<span
@@ -6469,9 +6468,9 @@ style='font:7.0pt "Times New Roman"'> </span>Scalable, Serverless Design</a></h5
 <p class=MsoNormal>eRecipeBox is built on SimpleCRUDFramework that encapsulates
 all of the common behavior for CRUDing business objects using DevExpress’ WinForms
 Ribbon-Based Application framework as well as implementing a simple FormStack
-for GUI window management. DevExpress’ framework is implemented as a Microsoft
-Multiple Document Interface (MDI) application. BusinessObject subclasses
-DevExpress XPO.XPObject who serves as our ORM to synchronize the Model and the DataStore.</p>
+for GUI window management. DevExpress’ framework is implemented as a Microsoft Multiple
+Document Interface (MDI) application. BusinessObject subclasses DevExpress XPO.XPObject
+who serves as our ORM to synchronize the Model and the DataStore.</p>
 
 <p class=MsoNormal align=center style='text-align:center'><img border=0
 width=721 height=430 src="eRecipeBoxArtifactsFinal_files/image025.jpg"></p>
@@ -6822,11 +6821,11 @@ references.</p>
 <p class=MsoNormal><b>Uniqueness validation and enforcement - Design</b></p>
 
 <p class=MsoNormal>Some properties must be unique across other business
-objects; often business keys visible to the end user such as Account Number, Customer
-ID, etc. Enforce uniqueness by creating a database unique index or constraint.
-Use HeadBusinessObject. GenerateUniqueConstraintName to generate the name for
-the constraint. Create the constraint in the DataStoreService app server
-startup logic (specifically, its static CreateDataStore method). During
+objects; often business keys visible to the end user such as Account Number,
+Customer ID, etc. Enforce uniqueness by creating a database unique index or
+constraint. Use HeadBusinessObject. GenerateUniqueConstraintName to generate
+the name for the constraint. Create the constraint in the DataStoreService app
+server startup logic (specifically, its static CreateDataStore method). During
 SaveModel, if attempting to save a duplicate property, the DataStore raises the
 constraint which propagates to the client. CRUDBusinessObjectForm.ProcessDataStoreException
 catches the exception, extracts the property, matches it to the DataStore check
@@ -6968,8 +6967,8 @@ width=720 height=405 src="eRecipeBoxArtifactsFinal_files/image027.jpg"></p>
 <p class=MsoNormal>OptimisticLockField supports optimistic concurrency and is
 incremented with each save. GCRecord supports soft deletes. A unique number is
 set in GCRecord, indicating the soft delete, and XPO nulls any foreign key
-values in the same record. eRecipeBox close app event handler calls
-PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
+values in the same record. eRecipeBox close app event handler calls PurgeDeletedObjects(),
+which deletes all records with GCRecord with values.</p>
 
 <h5><a name="_Toc171506216">3.1.4.4.1<span style='font:7.0pt "Times New Roman"'>
 </span>eRecipeBox Data Dictionary</a></h5>
@@ -7084,8 +7083,7 @@ PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
   <tr>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
-   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Cooked
-   Dish</p>
+   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Cooked Dish</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
@@ -7409,8 +7407,7 @@ PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
-   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>GC
-   Record</p>
+   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>GC Record</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
@@ -8082,8 +8079,7 @@ PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
-   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>GC
-   Record</p>
+   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>GC Record</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
@@ -8254,8 +8250,8 @@ PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
-   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Source
-   Individual First Name</p>
+   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Source Individual
+   First Name</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
@@ -8390,8 +8386,7 @@ PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
-   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>in
-   servings</p>
+   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>in servings</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
@@ -8722,7 +8717,8 @@ PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
   <tr>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
-   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>User Profile</p>
+   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>User
+   Profile</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
@@ -8823,8 +8819,7 @@ PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
   <tr>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
-   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>User
-   Profile</p>
+   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>User Profile</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
@@ -9177,7 +9172,8 @@ PurgeDeletedObjects(), which deletes all records with GCRecord with values.</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
-   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>User Profile</p>
+   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>User
+   Profile</p>
    </td>
    <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
    padding:0in 5.4pt 0in 5.4pt'>
@@ -10867,8 +10863,8 @@ Collects Click() response times.</p>
 
 <p class=MsoNormal><b>DxFormElements&lt;T&gt;</b> - Encapsulates the
 WinElements contained on a DevExpress RibbonForm. Provides methods to find both
-basic WinElements and complex elements on the form (specifically - gridView,
-schedular and tab)</p>
+basic WinElements and complex elements on the form (specifically - gridView, schedular
+and tab)</p>
 
 <p class=MsoNormal>There are also wrappers for each DevExpress component – XtraTabControl,
 XtraGrid and XtraSchedular.</p>
@@ -11398,9 +11394,9 @@ team and assigns individuals to each of these roles.</p>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Team Lead
-  grooms the Product Backlog, maintains the Risk Assessment &amp; Sprint Plan,
-  runs the daily CheckIn meetings &amp; weekly Sprint Planning meetings, and
-  Sprint Reviews. Most importantly, the Team Lead continuously finds creative
+  grooms the Product Backlog, maintains the Risk Assessment &amp; Sprint Plan, runs
+  the daily CheckIn meetings &amp; weekly Sprint Planning meetings, and Sprint
+  Reviews. Most importantly, the Team Lead continuously finds creative
   solutions to overcome blockers.</p>
   </td>
  </tr>
@@ -12234,7 +12230,8 @@ name="_Risk_Assessment"></a>5.2.1<span style='font:7.0pt "Times New Roman"'>&nbs
  <tr>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Data Security</p>
+  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Data
+  Security</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
@@ -12715,8 +12712,8 @@ PostgreSQL database and loads the system test data.</p>
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
 margin-bottom:0in;margin-left:.25in;text-indent:-.25in;line-height:normal'>11.<span
 style='font:7.0pt "Times New Roman"'>&nbsp; </span>Before closing eRecipeBox,
-use the Admin tab to encrypt your postgres superuser password. You’ll need the
-encrypted password for the app.config file.</p>
+use the Admin tab to encrypt your postgres superuser password. You’ll need the encrypted
+password for the app.config file.</p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
 margin-bottom:0in;margin-left:.25in;text-indent:-.25in;line-height:normal'>12.<span
@@ -13080,20 +13077,25 @@ setting UseWCF = true.</p>
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
 margin-bottom:0in;margin-left:.25in;text-indent:-.25in;line-height:normal'>11.<span
 style='font:7.0pt "Times New Roman"'>&nbsp; </span>Set eRecipeBox app config
-connection RecipeService = https://localhost:5757/service</p>
+connection RecipeService = <a href="https://localhost:5757/service">https://localhost:5757/service</a></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
 margin-bottom:0in;margin-left:.25in;text-indent:-.25in;line-height:normal'>12.<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>Run eRecipeBox client. Close
-eRecipeBox.</p>
+style='font:7.0pt "Times New Roman"'>&nbsp; </span>Delete the cached email on
+the client by deleting the …\eRecipeBoxSystem\eRecipeBox\bin\Debug\LicenceFiles\xxx.lic
+file.</p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
 margin-bottom:0in;margin-left:.25in;text-indent:-.25in;line-height:normal'>13.<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>Turn On firewall for the
-Private network profile and create rule allowing inbound connections on port
-5757</p>
+style='font:7.0pt "Times New Roman"'>&nbsp; </span>Run eRecipeBox client.
+Ensure to login with an email that exists in UserProfile. Close eRecipeBox.</p>
 
-<p class=MsoListParagraphCxSpLast style='margin-left:.25in;text-indent:-.25in'>14.<span
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:.25in;text-indent:-.25in;line-height:normal'>14.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span>Turn On firewall for the Private
+network profile and create rule allowing inbound connections on port 5757</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.25in;text-indent:-.25in'>15.<span
 style='font:7.0pt "Times New Roman"'>&nbsp; </span>Then run eRecipeBox client.</p>
 
 <h3><a name="_Toc102396137"></a><a name="_Toc123910821"></a><a
@@ -13105,8 +13107,8 @@ style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Test Team Environ
 <p class=MsoNormal>System Requirements: Windows 10 or 11 with at least 16GB
 RAM.</p>
 
-<p class=MsoNormal>Install and configure WinAppDriver, restore system test
-database, then run automated tests. These steps start at 27:40 in the <a
+<p class=MsoNormal>Install and configure WinAppDriver, restore system test database,
+then run automated tests. These steps start at 27:40 in the <a
 href="https://bit.ly/BuildDevAndTestEnvirons">dev &amp; test environment
 installation video</a>.</p>
 
@@ -14174,9 +14176,9 @@ with your creations.</p>
   </td>
   <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Add
-  autoupdate app version to eRecipeBox. Launch eRB, authenticate, check to see
-  if there is a new version and prompt user to update.</p>
+  <p class=NormalSmaller style='margin-bottom:0in;line-height:normal'>Add autoupdate
+  app version to eRecipeBox. Launch eRB, authenticate, check to see if there is
+  a new version and prompt user to update.</p>
   </td>
  </tr>
  <tr>

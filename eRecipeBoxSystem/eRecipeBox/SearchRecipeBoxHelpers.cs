@@ -728,12 +728,11 @@ or Keywords[Name like '%{0}%'])";
             searchParmLookUpEdit.Text = null;
             LastLookupEditKey = Keys.None;
 
-            //set focus to search results 
-            gridView.Focus();
-
-            //#TRICKY unable to clear the filter input here directly.  Instead, let set the focus to the search results.
+            //#TRICKY unable to clear the filter input here directly.  Instead,  set the focus to the search results.
             //Click a button to clear the input in a separate event
             //need this to clear input after selecting a choice and hitting Enter
+            //set focus to search results 
+            gridView.Focus();
             Thread.Sleep(5);
             clrInptBrBttnItm.PerformClick();
         }

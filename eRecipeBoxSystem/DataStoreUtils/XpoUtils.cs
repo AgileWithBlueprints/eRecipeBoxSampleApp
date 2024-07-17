@@ -106,7 +106,7 @@ namespace DataStoreUtils
                 string crParms = DisplayString(criteriaParametersList);
                 //https://supportcenter.devexpress.com/ticket/details/t755340/xpinstantfeedbacksource-and-total-row-count
                 Type t = xpInstantFeedbackView.ObjectType;
-                //#TODO BUG potentially.. in some cases, not same count as grid results when using postgres. need to triage.
+                //#TODO BUG DevEx T1243794 Count is not the same count as grid results when using postgres.
                 var count = XpoDefault.Session.Evaluate(t, new AggregateOperand("", Aggregate.Count), xpInstantFeedbackView.FixedFilterCriteria);
                 Log.DataStore.Info($"QueryView|{t.Name}|{criteriaString}|{crParms}|ResultCount={count}");
             }

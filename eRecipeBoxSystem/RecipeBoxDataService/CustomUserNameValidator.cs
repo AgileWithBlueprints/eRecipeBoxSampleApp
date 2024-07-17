@@ -85,6 +85,8 @@ new ViewProperty("Oid", SortDirection.None, "[Oid]",false, true),
                 xpView.Criteria = CriteriaOperator.Parse($"PersonalEmail = '{email2}'");
                 int numberFoundRecords = xpView.Count;
 
+                //#TODO This error message is not displayed to the client. Triage, fix so user
+                //gets approprate error message
                 if (numberFoundRecords != 1)
                     throw new FaultException("Email must be registered. See your Administrator");
             }

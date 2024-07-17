@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "eRecipeBoxSingleUser"
-#define MyAppVersion "24.1.3.13" ; and below
+#define MyAppVersion "24.1.3.14" ; and below
 #define MyAppPublisher "SoftArc, LLC"
 #define MyAppURL "https://www.agilewithblueprints.com/"
 #define MyAppExeName "eRecipeBox.exe"
@@ -23,7 +23,7 @@ DefaultGroupName={#MyAppName}
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
 OutputDir=C:\temp
-OutputBaseFilename=eRecipeBoxSingleUserSetup24.1.3.13
+OutputBaseFilename=eRecipeBoxSingleUserSetup24.1.3.14
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
