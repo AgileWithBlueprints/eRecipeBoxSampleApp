@@ -29,6 +29,7 @@ This eRecipeBox sample app illustrates how all artifacts integrate and influence
 - How to design a reusable UI framework that supports CRUDing business data and UI window navigation
 - How to use Google email services with OAuth2
 - How to integrate OpenAI services into your business application
+- How to integrate speech-to-text services into your business application
 - How to design and implement automated system tests
 - How to minimize effort documenting requirements by extracting detailed requirements from source code
 - How to use automation to generate large test data sets for stress testing
