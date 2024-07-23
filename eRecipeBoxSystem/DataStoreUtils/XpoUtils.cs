@@ -28,6 +28,7 @@ using DevExpress.Xpo.Metadata;
 using Foundation;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using static DataStoreUtils.DbConnection;
 
@@ -104,11 +105,19 @@ namespace DataStoreUtils
                 OperandValue[] criteriaParametersList;
                 string criteriaString = CriteriaOperator.ToString(withCriteria, out criteriaParametersList);
                 string crParms = DisplayString(criteriaParametersList);
+                Type headType = xpInstantFeedbackView.ObjectType;
                 //https://supportcenter.devexpress.com/ticket/details/t755340/xpinstantfeedbacksource-and-total-row-count
-                Type t = xpInstantFeedbackView.ObjectType;
-                //#TODO BUG DevEx T1243794 Count is not the same count as grid results when using postgres.
-                var count = XpoDefault.Session.Evaluate(t, new AggregateOperand("", Aggregate.Count), xpInstantFeedbackView.FixedFilterCriteria);
-                Log.DataStore.Info($"QueryView|{t.Name}|{criteriaString}|{crParms}|ResultCount={count}");
+
+
+                //#TODO DevEx T1243794 Count is not the same count as grid results when using postgres.
+                //For Postgres, Evaluate isn't server mode, so it is case sensitive 
+                //DevExpress.Data.Helpers.ServerModeCore.DefaultForceCaseInsensitiveForAnySource = true;
+                //int countAgain = (int)XpoDefault.Session.Evaluate(t, new AggregateOperand("", Aggregate.Count), xpInstantFeedbackView1.FixedFilterCriteria);
+                //var count = XpoDefault.Session.Evaluate(t, new AggregateOperand("", Aggregate.Count), xpInstantFeedbackView.FixedFilterCriteria);
+                //#WORKAROUND PERFORMANCE XPServerCollectionSource runs server mode, however only way to get count is to fetch the entire list.
+                //Acceptable since we only log with SystemTestLogging=true
+                int count = ((IListSource)xpInstantFeedbackView).GetList().Count;
+                Log.DataStore.Info($"QueryView|{headType.Name}|{criteriaString}|{crParms}|ResultCount={count}");
             }
         }
 
